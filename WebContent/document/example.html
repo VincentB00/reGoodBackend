@@ -1,0 +1,1015 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 16 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="reGood.css" rel="stylesheet">
+<link href="example.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+</div>
+<div id="wb_Divider4">
+<div id="Divider4">
+<hr id="DividerLine5" style="display:block;">
+<div id="wb_Heading2" style="display:inline-block;width:165px;z-index:1;">
+<h2 id="Heading2">Authentication</h2>
+</div>
+<hr id="DividerLine7" style="display:block;">
+</div>
+</div>
+<div id="FlexGrid1">
+<div class="header">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading1">Get Status:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading3" style="display:inline-block;width:100%;z-index:4;">
+<h1 id="Heading3">GET /rest/status</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading4" style="display:inline-block;width:100%;z-index:5;">
+<h1 id="Heading4">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea1" style="display:block;width: 100%;;height:83px;z-index:6;" rows="2" cols="78" readonly spellcheck="false">return the current Status of Server 
+or
+return the current status of session if token is valid</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading5" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading5">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea2" style="display:block;width: 100%;;height:62px;z-index:8;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:9;">
+<h1 id="Heading6">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea3" style="display:block;width: 100%;;height:69px;z-index:10;" rows="1" cols="78" readonly spellcheck="false">token:String
+session token (is given when login)</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading8" style="display:inline-block;width:100%;z-index:11;">
+<h1 id="Heading8">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea7" style="display:block;width: 100%;;height:62px;z-index:12;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading7" style="display:inline-block;width:100%;z-index:13;">
+<h1 id="Heading7">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea4" style="display:block;width: 100%;;height:69px;z-index:14;" rows="1" cols="78" readonly spellcheck="false">Code 400: invalid or missing token
+Code 403: session/token expire or invalid</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea5" style="display:block;width: 100%;;height:312px;z-index:15;" rows="13" cols="38" readonly spellcheck="false">Code 200 
+Body:
+SQL_connection:String
+result of databases check (pass or fail)
+-------------------------------------------------------------------------------------------------------
+SQL_datetime_test:String
+result of now() querry
+-------------------------------------------------------------------------------------------------------
+status:String
+final result of all check</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea6" style="display:block;width: 100%;;height:308px;z-index:16;" rows="13" cols="38" readonly spellcheck="false">Example Response
+{
+    "SQL_connection": "pass",
+    "SQL_datetime_test": "2022-02-02 14:07:43",
+    "status": "normal"
+}
+
+{
+    "session": "alive"
+}</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape1" style="display:inline-block;width:76px;height:42px;z-index:17;position:relative;">
+<img src="images/img0003.png" id="Shape1" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid2">
+<div class="header">
+<div id="wb_Heading9" style="display:inline-block;width:100%;z-index:18;">
+<h1 id="Heading9">Get session data:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:19;">
+<h1 id="Heading10">GET /rest/session_data</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading11" style="display:inline-block;width:100%;z-index:20;">
+<h1 id="Heading11">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea8" style="display:block;width: 100%;;height:83px;z-index:21;" rows="2" cols="78" readonly spellcheck="false">return session data base on Querry parameter token</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading12" style="display:inline-block;width:100%;z-index:22;">
+<h1 id="Heading12">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea9" style="display:block;width: 100%;;height:62px;z-index:23;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading13" style="display:inline-block;width:100%;z-index:24;">
+<h1 id="Heading13">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea10" style="display:block;width: 100%;;height:69px;z-index:25;" rows="1" cols="78" readonly spellcheck="false">token:String
+session token (is given when login)</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading15" style="display:inline-block;width:100%;z-index:26;">
+<h1 id="Heading15">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea14" style="display:block;width: 100%;;height:62px;z-index:27;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading14" style="display:inline-block;width:100%;z-index:28;">
+<h1 id="Heading14">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea11" style="display:block;width: 100%;;height:69px;z-index:29;" rows="1" cols="78" readonly spellcheck="false">Code 400: invalid or missing token
+Code 403: session/token expire or invalid</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea12" style="display:block;width: 100%;;height:312px;z-index:30;" rows="13" cols="38" readonly spellcheck="false">Code 200
+Body:
+user_id:int
+id of current logedin user
+----------------------------------------------
+user_group_id:int
+user group id of current logedin user
+----------------------------------------------
+website_id:int
+id of current website being logedin by user
+----------------------------------------------
+user_full_name:String
+full name of current logedin user
+----------------------------------------------
+website_name:String
+name of current website being logedin by user
+----------------------------------------------
+user_group_name:String
+name of user group of current logedin user on current website
+----------------------------------------------
+user_level:int
+user group level of current logedin user on current website</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea13" style="display:block;width: 100%;;height:308px;z-index:31;" rows="13" cols="38" readonly spellcheck="false">Example Response
+{
+    "user_id": 3,
+    "user_group_id": 3,
+    "website_id": 1,
+    "user_full_name": "som ting wong",
+    "website_name": "Authentication",
+    "user_group_name": "ADMIN",
+    "user_level": 2
+}</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape2" style="display:inline-block;width:76px;height:42px;z-index:32;position:relative;">
+<img src="images/img0004.png" id="Shape2" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid3">
+<div class="header">
+<div id="wb_Heading16" style="display:inline-block;width:100%;z-index:33;">
+<h1 id="Heading16">Get session current time</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading17" style="display:inline-block;width:100%;z-index:34;">
+<h1 id="Heading17">GET /rest/session_current_time</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading18" style="display:inline-block;width:100%;z-index:35;">
+<h1 id="Heading18">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea15" style="display:block;width: 100%;;height:83px;z-index:36;" rows="2" cols="78" readonly spellcheck="false">return session current time base on Querry parameter token</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading19" style="display:inline-block;width:100%;z-index:37;">
+<h1 id="Heading19">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea16" style="display:block;width: 100%;;height:62px;z-index:38;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading20" style="display:inline-block;width:100%;z-index:39;">
+<h1 id="Heading20">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea17" style="display:block;width: 100%;;height:69px;z-index:40;" rows="1" cols="78" readonly spellcheck="false">token:String
+session token (is given when login)</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading22" style="display:inline-block;width:100%;z-index:41;">
+<h1 id="Heading22">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea21" style="display:block;width: 100%;;height:62px;z-index:42;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading21" style="display:inline-block;width:100%;z-index:43;">
+<h1 id="Heading21">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea18" style="display:block;width: 100%;;height:69px;z-index:44;" rows="1" cols="78" readonly spellcheck="false">Code 400: invalid or missing token
+Code 403: session/token expire or invalid</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea19" style="display:block;width: 100%;;height:312px;z-index:45;" rows="13" cols="38" readonly spellcheck="false">Code 200
+Body:
+current_time:String
+time last active of current user being store on databases</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea20" style="display:block;width: 100%;;height:308px;z-index:46;" rows="13" cols="38" readonly spellcheck="false">Example Response
+{
+    "current_time": "2022-02-02 15:50:22"
+}</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape3" style="display:inline-block;width:76px;height:42px;z-index:47;position:relative;">
+<img src="images/img0005.png" id="Shape3" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid4">
+<div class="header">
+<div id="wb_Heading23" style="display:inline-block;width:100%;z-index:48;">
+<h1 id="Heading23">Get user data:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading24" style="display:inline-block;width:100%;z-index:49;">
+<h1 id="Heading24">GET /rest/user_data</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading25" style="display:inline-block;width:100%;z-index:50;">
+<h1 id="Heading25">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea22" style="display:block;width: 100%;;height:83px;z-index:51;" rows="2" cols="78" readonly spellcheck="false">return session current user data base on Querry parameter token</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading26" style="display:inline-block;width:100%;z-index:52;">
+<h1 id="Heading26">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea23" style="display:block;width: 100%;;height:62px;z-index:53;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading27" style="display:inline-block;width:100%;z-index:54;">
+<h1 id="Heading27">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea24" style="display:block;width: 100%;;height:69px;z-index:55;" rows="1" cols="78" readonly spellcheck="false">token:String
+session token (is given when login)</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading29" style="display:inline-block;width:100%;z-index:56;">
+<h1 id="Heading29">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea28" style="display:block;width: 100%;;height:62px;z-index:57;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading28" style="display:inline-block;width:100%;z-index:58;">
+<h1 id="Heading28">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea25" style="display:block;width: 100%;;height:69px;z-index:59;" rows="1" cols="78" readonly spellcheck="false">Code 400: invalid or missing token
+Code 403: session/token expire or invalid</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea26" style="display:block;width: 100%;;height:312px;z-index:60;" rows="13" cols="38" readonly spellcheck="false">Code 200
+Body:
+id:int
+user id
+----------------------------------------------
+username:String
+username of user
+----------------------------------------------
+password:String
+password of user (SHA256)
+----------------------------------------------
+email:String
+email of user
+----------------------------------------------
+create_time:String
+time of creation
+----------------------------------------------
+full_name:String
+full name of user
+----------------------------------------------
+phone_number:String
+phone number of user</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea27" style="display:block;width: 100%;;height:308px;z-index:61;" rows="13" cols="38" readonly spellcheck="false">Example Response
+{
+    "id": 3,
+    "username": "ice cream",
+    "password": "1accad5e02038836079d65faad457f8f0c3577a3e520cd3a6a5f5c7bc2bdaaf5",
+    "email": "null",
+    "create_time": "2022-02-01 18:28:15",
+    "full_name": "emotional damgesl",
+    "phone_number": "null"
+}</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape4" style="display:inline-block;width:76px;height:42px;z-index:62;position:relative;">
+<img src="images/img0006.png" id="Shape4" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid5">
+<div class="header">
+<div id="wb_Heading30" style="display:inline-block;width:100%;z-index:63;">
+<h1 id="Heading30">Set SQL server databases:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading31" style="display:inline-block;width:100%;z-index:64;">
+<h1 id="Heading31">POST /rest/sql</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading32" style="display:inline-block;width:100%;z-index:65;">
+<h1 id="Heading32">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea29" style="display:block;width: 100%;;height:83px;z-index:66;" rows="2" cols="78" readonly spellcheck="false">set sql databases for use with backend
+(for developer only)</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading33" style="display:inline-block;width:100%;z-index:67;">
+<h1 id="Heading33">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea30" style="display:block;width: 100%;;height:62px;z-index:68;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading34" style="display:inline-block;width:100%;z-index:69;">
+<h1 id="Heading34">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea31" style="display:block;width: 100%;;height:69px;z-index:70;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading36" style="display:inline-block;width:100%;z-index:71;">
+<h1 id="Heading36">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading37" style="display:inline-block;width:100%;z-index:72;">
+<h1 id="Heading37">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea35" style="display:block;width: 100%;;height:350px;z-index:73;" rows="15" cols="38" readonly spellcheck="false">ip:String
+ip address of SQL server
+----------------------------------------------
+port:int
+port number of SQL server
+----------------------------------------------
+username:String
+username of SQL server
+----------------------------------------------
+password:String
+password of SQL server
+----------------------------------------------
+schema:String
+chosen schemas name of SQL server</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea36" style="display:block;width: 100%;;height:350px;z-index:74;" rows="15" cols="38" readonly spellcheck="false">{
+    "ip":"192.168.1.1",
+    "port":0000,
+    "username":"ice cream",
+    "password":"yummy",
+    "schema":"sugar_high"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading35" style="display:inline-block;width:100%;z-index:75;">
+<h1 id="Heading35">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea32" style="display:block;width: 100%;;height:69px;z-index:76;" rows="1" cols="78" readonly spellcheck="false">Code 400: Error: body package</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea33" style="display:block;width: 100%;;height:100px;z-index:77;" rows="3" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea34" style="display:block;width: 100%;;height:100px;z-index:78;" rows="3" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape5" style="display:inline-block;width:76px;height:42px;z-index:79;position:relative;">
+<img src="images/img0007.png" id="Shape5" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid6">
+<div class="header">
+<div id="wb_Heading38" style="display:inline-block;width:100%;z-index:80;">
+<h1 id="Heading38">Login user:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading39" style="display:inline-block;width:100%;z-index:81;">
+<h1 id="Heading39">POST /rest/login</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading40" style="display:inline-block;width:100%;z-index:82;">
+<h1 id="Heading40">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea37" style="display:block;width: 100%;;height:83px;z-index:83;" rows="2" cols="78" readonly spellcheck="false">login user
+return token will automatic expire after 15 mins</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading41" style="display:inline-block;width:100%;z-index:84;">
+<h1 id="Heading41">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea38" style="display:block;width: 100%;;height:62px;z-index:85;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading42" style="display:inline-block;width:100%;z-index:86;">
+<h1 id="Heading42">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea39" style="display:block;width: 100%;;height:69px;z-index:87;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading44" style="display:inline-block;width:100%;z-index:88;">
+<h1 id="Heading44">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading45" style="display:inline-block;width:100%;z-index:89;">
+<h1 id="Heading45">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea43" style="display:block;width: 100%;;height:350px;z-index:90;" rows="15" cols="38" readonly spellcheck="false">username:String
+username of user
+--------------------------------------
+password:String
+password of user
+--------------------------------------
+ipv4:String
+url or ipv4 of website
+--------------------------------------
+name:String
+name of website</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea44" style="display:block;width: 100%;;height:350px;z-index:91;" rows="15" cols="38" readonly spellcheck="false">{
+    "username": "ice cream",
+    "password": "loveit",
+    "ipv4":"reGood.ddns.net"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading43" style="display:inline-block;width:100%;z-index:92;">
+<h1 id="Heading43">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea40" style="display:block;width: 100%;;height:87px;z-index:93;" rows="2" cols="78" readonly spellcheck="false">Code 400: bad body package
+Code 500: something when wrong with database
+code 403: can't find user</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea41" style="display:block;width: 100%;;height:150px;z-index:94;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea42" style="display:block;width: 100%;;height:150px;z-index:95;" rows="5" cols="38" readonly spellcheck="false">Example Response
+{
+    "token": "5381705ca3b777ccdf6b49fc83f10ae57c89d6de50e48d7048e524790204e722"
+}</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape6" style="display:inline-block;width:76px;height:42px;z-index:96;position:relative;">
+<img src="images/img0008.png" id="Shape6" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid7">
+<div class="header">
+<div id="wb_Heading46" style="display:inline-block;width:100%;z-index:97;">
+<h1 id="Heading46">Renew Session:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading47" style="display:inline-block;width:100%;z-index:98;">
+<h1 id="Heading47">POST /rest/renew_session</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading48" style="display:inline-block;width:100%;z-index:99;">
+<h1 id="Heading48">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea45" style="display:block;width: 100%;;height:83px;z-index:100;" rows="2" cols="78" readonly spellcheck="false">renew session token</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading49" style="display:inline-block;width:100%;z-index:101;">
+<h1 id="Heading49">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea46" style="display:block;width: 100%;;height:62px;z-index:102;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading50" style="display:inline-block;width:100%;z-index:103;">
+<h1 id="Heading50">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea47" style="display:block;width: 100%;;height:69px;z-index:104;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading52" style="display:inline-block;width:100%;z-index:105;">
+<h1 id="Heading52">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading53" style="display:inline-block;width:100%;z-index:106;">
+<h1 id="Heading53">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea51" style="display:block;width: 100%;;height:350px;z-index:107;" rows="15" cols="38" readonly spellcheck="false">token:String
+session token</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea52" style="display:block;width: 100%;;height:350px;z-index:108;" rows="15" cols="38" readonly spellcheck="false">{
+    "token": "5381705ca3b777ccdf6b49fc83f10ae57c89d6de50e48d7048e524790204e722"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading51" style="display:inline-block;width:100%;z-index:109;">
+<h1 id="Heading51">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea48" style="display:block;width: 100%;;height:87px;z-index:110;" rows="2" cols="78" readonly spellcheck="false">Code 400: invalid or missing token
+Code 403: session/token expire or invalid
+code 403: something when wrong</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea49" style="display:block;width: 100%;;height:150px;z-index:111;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea50" style="display:block;width: 100%;;height:150px;z-index:112;" rows="5" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape7" style="display:inline-block;width:76px;height:42px;z-index:113;position:relative;">
+<img src="images/img0009.png" id="Shape7" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid8">
+<div class="header">
+<div id="wb_Heading54" style="display:inline-block;width:100%;z-index:114;">
+<h1 id="Heading54">Register website:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading55" style="display:inline-block;width:100%;z-index:115;">
+<h1 id="Heading55">PUT /rest/register_website</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading56" style="display:inline-block;width:100%;z-index:116;">
+<h1 id="Heading56">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea53" style="display:block;width: 100%;;height:83px;z-index:117;" rows="2" cols="78" readonly spellcheck="false">Register a new website to database
+(for developer only)</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading57" style="display:inline-block;width:100%;z-index:118;">
+<h1 id="Heading57">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea54" style="display:block;width: 100%;;height:62px;z-index:119;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading58" style="display:inline-block;width:100%;z-index:120;">
+<h1 id="Heading58">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea55" style="display:block;width: 100%;;height:69px;z-index:121;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading60" style="display:inline-block;width:100%;z-index:122;">
+<h1 id="Heading60">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading61" style="display:inline-block;width:100%;z-index:123;">
+<h1 id="Heading61">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea59" style="display:block;width: 100%;;height:350px;z-index:124;" rows="15" cols="38" readonly spellcheck="false">name:String
+name of website
+-----------------------------------------
+ipv4:String
+ipv4 of website
+-----------------------------------------
+ipv6:String
+ipv6 of website
+-----------------------------------------
+port:int
+port number
+-----------------------------------------
+dev_key:String
+developer key</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea60" style="display:block;width: 100%;;height:350px;z-index:125;" rows="15" cols="38" readonly spellcheck="false">{
+    "name": "reNew",
+    "ipv4": "reNew",
+    "dev_key": "5381705ca3b777ccdf6b49fc83f10ae57c89d6de50e48d7048e524790204e722"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading59" style="display:inline-block;width:100%;z-index:126;">
+<h1 id="Heading59">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea56" style="display:block;width: 100%;;height:87px;z-index:127;" rows="2" cols="78" readonly spellcheck="false">Code 403: invalid or missing developer key
+Code 400: bad body package</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea57" style="display:block;width: 100%;;height:150px;z-index:128;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea58" style="display:block;width: 100%;;height:150px;z-index:129;" rows="5" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape8" style="display:inline-block;width:76px;height:42px;z-index:130;position:relative;">
+<img src="images/img0010.png" id="Shape8" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid9">
+<div class="header">
+<div id="wb_Heading62" style="display:inline-block;width:100%;z-index:131;">
+<h1 id="Heading62">Register user group:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading63" style="display:inline-block;width:100%;z-index:132;">
+<h1 id="Heading63">PUT /rest/register_user_group</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading64" style="display:inline-block;width:100%;z-index:133;">
+<h1 id="Heading64">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea61" style="display:block;width: 100%;;height:83px;z-index:134;" rows="2" cols="78" readonly spellcheck="false">Register a new user group to database
+(for developer only)</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading65" style="display:inline-block;width:100%;z-index:135;">
+<h1 id="Heading65">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea62" style="display:block;width: 100%;;height:62px;z-index:136;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading66" style="display:inline-block;width:100%;z-index:137;">
+<h1 id="Heading66">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea63" style="display:block;width: 100%;;height:69px;z-index:138;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading68" style="display:inline-block;width:100%;z-index:139;">
+<h1 id="Heading68">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading69" style="display:inline-block;width:100%;z-index:140;">
+<h1 id="Heading69">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea67" style="display:block;width: 100%;;height:350px;z-index:141;" rows="15" cols="38" readonly spellcheck="false">name:String
+name of user group
+-----------------------------------------
+level:int
+level of user group
+-----------------------------------------
+description:String
+note for that user group
+-----------------------------------------
+dev_key:String
+developer key</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea68" style="display:block;width: 100%;;height:350px;z-index:142;" rows="15" cols="38" readonly spellcheck="false">{
+    "name": "NORMAL",
+    "level": "1",
+    "description": "normal user",
+    "dev_key": "5381705ca3b777ccdf6b49fc83f10ae57c89d6de50e48d7048e524790204e722"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading67" style="display:inline-block;width:100%;z-index:143;">
+<h1 id="Heading67">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea64" style="display:block;width: 100%;;height:87px;z-index:144;" rows="2" cols="78" readonly spellcheck="false">Code 403: invalid or missing developer key
+Code 400: bad body package
+Code 202: something when wrong</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea65" style="display:block;width: 100%;;height:150px;z-index:145;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea66" style="display:block;width: 100%;;height:150px;z-index:146;" rows="5" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape9" style="display:inline-block;width:76px;height:42px;z-index:147;position:relative;">
+<img src="images/img0011.png" id="Shape9" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid10">
+<div class="header">
+<div id="wb_Heading70" style="display:inline-block;width:100%;z-index:148;">
+<h1 id="Heading70">Register user:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading71" style="display:inline-block;width:100%;z-index:149;">
+<h1 id="Heading71">PUT /rest/register_user</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading72" style="display:inline-block;width:100%;z-index:150;">
+<h1 id="Heading72">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea69" style="display:block;width: 100%;;height:83px;z-index:151;" rows="2" cols="78" readonly spellcheck="false">Register a new user</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading73" style="display:inline-block;width:100%;z-index:152;">
+<h1 id="Heading73">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea70" style="display:block;width: 100%;;height:62px;z-index:153;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading74" style="display:inline-block;width:100%;z-index:154;">
+<h1 id="Heading74">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea71" style="display:block;width: 100%;;height:69px;z-index:155;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading76" style="display:inline-block;width:100%;z-index:156;">
+<h1 id="Heading76">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading77" style="display:inline-block;width:100%;z-index:157;">
+<h1 id="Heading77">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea75" style="display:block;width: 100%;;height:350px;z-index:158;" rows="15" cols="38" readonly spellcheck="false">username:String
+username of user
+-----------------------------------------
+password:String
+password of user
+-----------------------------------------
+email:String
+email of user
+-----------------------------------------
+full_name:String
+full name of user
+-----------------------------------------
+phone_number:String
+phone number of user</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea76" style="display:block;width: 100%;;height:350px;z-index:159;" rows="15" cols="38" readonly spellcheck="false">{
+    "username": "badboy",
+    "password": "nice",
+    "email": "umm@gmail.com",
+    "full_name": "billy",
+    "phone_number": "1112223333"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading75" style="display:inline-block;width:100%;z-index:160;">
+<h1 id="Heading75">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea72" style="display:block;width: 100%;;height:87px;z-index:161;" rows="2" cols="78" readonly spellcheck="false">Code 400: bad body package
+Code 202: something when wrong
+Code 500: something when wrong with database</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea73" style="display:block;width: 100%;;height:150px;z-index:162;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea74" style="display:block;width: 100%;;height:150px;z-index:163;" rows="5" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape10" style="display:inline-block;width:76px;height:42px;z-index:164;position:relative;">
+<img src="images/img0013.png" id="Shape10" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="FlexGrid11">
+<div class="header">
+<div id="wb_Heading78" style="display:inline-block;width:100%;z-index:165;">
+<h1 id="Heading78">Logout user:</h1>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading79" style="display:inline-block;width:100%;z-index:166;">
+<h1 id="Heading79">Delete /rest/logout</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading80" style="display:inline-block;width:100%;z-index:167;">
+<h1 id="Heading80">Description</h1>
+</div>
+</div>
+<div class="main">
+<textarea name="TextArea1" id="TextArea77" style="display:block;width: 100%;;height:83px;z-index:168;" rows="2" cols="78" readonly spellcheck="false">Register a new user</textarea>
+</div>
+<div class="article1">
+<div id="wb_Heading81" style="display:inline-block;width:100%;z-index:169;">
+<h1 id="Heading81">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<textarea name="TextArea2" id="TextArea78" style="display:block;width: 100%;;height:62px;z-index:170;" rows="1" cols="78" readonly spellcheck="false">None
+</textarea>
+</div>
+<div class="article3">
+<div id="wb_Heading82" style="display:inline-block;width:100%;z-index:171;">
+<h1 id="Heading82">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<textarea name="TextArea2" id="TextArea79" style="display:block;width: 100%;;height:69px;z-index:172;" rows="1" cols="78" readonly spellcheck="false">None</textarea>
+</div>
+<div class="article6">
+<div id="wb_Heading84" style="display:inline-block;width:100%;z-index:173;">
+<h1 id="Heading84">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading85" style="display:inline-block;width:100%;z-index:174;">
+<h1 id="Heading85">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<textarea name="TextArea2" id="TextArea83" style="display:block;width: 100%;;height:150px;z-index:175;" rows="5" cols="38" readonly spellcheck="false">token:String
+session token</textarea>
+</div>
+<div class="BodyExample">
+<textarea name="TextArea2" id="TextArea84" style="display:block;width: 100%;;height:150px;z-index:176;" rows="5" cols="38" readonly spellcheck="false">{
+    "token": "5381705ca3b777ccdf6b49fc83f10ae57c89d6de50e48d7048e524790204e722"
+}</textarea>
+</div>
+<div class="article5">
+<div id="wb_Heading83" style="display:inline-block;width:100%;z-index:177;">
+<h1 id="Heading83">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<textarea name="TextArea2" id="TextArea80" style="display:block;width: 100%;;height:87px;z-index:178;" rows="2" cols="78" readonly spellcheck="false">Code 500: something when wrong with database</textarea>
+</div>
+<div class="Body">
+<textarea name="TextArea2" id="TextArea81" style="display:block;width: 100%;;height:150px;z-index:179;" rows="5" cols="38" readonly spellcheck="false">Code 200</textarea>
+</div>
+<div class="Code">
+<textarea name="TextArea2" id="TextArea82" style="display:block;width: 100%;;height:150px;z-index:180;" rows="5" cols="38" readonly spellcheck="false">Example Response
+None</textarea>
+</div>
+<div class="Line">
+<div id="wb_Shape11" style="display:inline-block;width:76px;height:42px;z-index:181;position:relative;">
+<img src="images/img0014.png" id="Shape11" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="wb_Divider3">
+<div id="Divider3">
+<hr id="DividerLine3" style="display:block;">
+<div id="wb_Heading86" style="display:inline-block;width:165px;z-index:183;">
+<h2 id="Heading86">END</h2>
+</div>
+<hr id="DividerLine4" style="display:block;">
+</div>
+</div>
+<div id="wb_Divider2">
+<div id="Divider2-overlay"></div>
+<div id="Divider2">
+<div class="row">
+<div class="col-1">
+<div id="wb_TextArt1" style="display:inline-block;width:104px;height:100px;z-index:185;position:relative;">
+<img src="images/img0015.png" id="TextArt1" alt="Vincent" title="Vincent" style="width:104px;height:100px;">
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

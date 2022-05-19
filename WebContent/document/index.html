@@ -1,0 +1,1313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>reGood API document</title>
+<meta name="generator" content="WYSIWYG Web Builder 16 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="reGood.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+</div>
+<div id="wb_Divider4">
+<div id="Divider4">
+<hr id="DividerLine5" style="display:block;">
+<div id="wb_Heading2" style="display:inline-block;width:165px;z-index:1;">
+<h2 id="Heading2">reGood</h2>
+</div>
+<hr id="DividerLine7" style="display:block;">
+</div>
+</div>
+<div id="Get_Item_information">
+<div class="Method_Description">
+<div id="wb_Text8">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Get item information</strong></span>
+</div>
+</div>
+<div class="API_call">
+<div id="wb_Heading3" style="display:inline-block;width:100%;z-index:4;">
+<h1 id="Heading3">GET /rest/item</h1>
+</div>
+</div>
+<div class="Description_header">
+<div id="wb_Heading4" style="display:inline-block;width:100%;z-index:5;">
+<h1 id="Heading4">Description</h1>
+</div>
+</div>
+<div class="Description">
+<div id="wb_Text1">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">This will return item information base on Querry parameter</span>
+</div>
+</div>
+<div class="header_Parameter">
+<div id="wb_Heading62" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading62">Header Parameter</h1>
+</div>
+</div>
+<div class="header_Parameter_text">
+<div id="wb_Text79">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="Path_parameter">
+<div id="wb_Heading5" style="display:inline-block;width:100%;z-index:9;">
+<h1 id="Heading5">Path Parameters</h1>
+</div>
+</div>
+<div class="Path_parameter_text">
+<div id="wb_Text2">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Querry_Parameter">
+<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:11;">
+<h1 id="Heading6">Querry Parameters</h1>
+</div>
+</div>
+<div class="Querry_Parameter_text">
+<div id="wb_Text3">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">item_id: Integer<br>item id of an item<br>---------------------------------<br>row_index: Integer<br>begin row index of a range<br>---------------------------------<br>range: Integer<br>how many item count from row_index<br>(EX: row_index=12,range=5 --&gt; get 6 item count from row_index 12)</span>
+</div>
+</div>
+<div class="Body_Parameter">
+<div id="wb_Heading8" style="display:inline-block;width:100%;z-index:13;">
+<h1 id="Heading8">Body Parameters</h1>
+</div>
+</div>
+<div class="Body_Parameter_text">
+<div id="wb_Text4">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Responses">
+<div id="wb_Heading7" style="display:inline-block;width:100%;z-index:15;">
+<h1 id="Heading7">Responses</h1>
+</div>
+</div>
+<div class="statusCode_text">
+<div id="wb_Text5">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 400: bad request<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body_StatusCode">
+<div id="wb_Text7">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Body<br>item_id: int<br>item id<br>----------------------------------------<br>name: String<br>item name<br>----------------------------------------<br>description: String<br>item description<br>----------------------------------------<br>category: String<br>item category<br>----------------------------------------<br>location: String<br>item location<br>----------------------------------------<br>condition: String<br>item condition<br>----------------------------------------<br>city: String<br>city location<br>----------------------------------------<br>state: String<br>state of united state<br>----------------------------------------<br>zipCode: String<br>zip code of united state<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text6">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response:<br>{<br>&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 7,<br>&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;wqhfuoweh&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;wifbqijfb&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;wekfjwejfkewnoj&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;weojfbnwejofn&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;wefjbnwejon&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;11111&quot;<br>}<br><br>[<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 7,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;name&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;description&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;category&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;item_condition&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;city&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;state&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;123&quot;<br>&nbsp;&nbsp;&nbsp; },<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 8,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;ewnfjiqwn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;wefjlnwejofn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;wefljwenfjl&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;wefljwenfjlkw&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;wefwefjln&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;&quot;<br>&nbsp;&nbsp;&nbsp; },<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 9,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;ewojfbnweojfn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;wefojnewjof&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;edwfjlowniof&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;ewfojnwejokfn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;wefojbwnefjln&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;&quot;<br>&nbsp;&nbsp;&nbsp; }<br>]</span>
+</div>
+</div>
+<div class="Seperator">
+<div id="wb_Shape1" style="display:inline-block;width:76px;height:42px;z-index:19;position:relative;">
+<img src="images/img0001.png" id="Shape1" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Get_all_user_posted_item">
+<div class="header">
+<div id="wb_Text43">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Get All user posted item</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading22" style="display:inline-block;width:100%;z-index:21;">
+<h1 id="Heading22">GET /rest/user_item</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading23" style="display:inline-block;width:100%;z-index:22;">
+<h1 id="Heading23">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text36">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">This will return all user posted item information</span>
+</div>
+</div>
+<div class="a1">
+<div id="wb_Heading63" style="display:inline-block;width:100%;z-index:24;">
+<h1 id="Heading63">Header Parameter</h1>
+</div>
+</div>
+<div class="a2">
+<div id="wb_Text80">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading24" style="display:inline-block;width:100%;z-index:26;">
+<h1 id="Heading24">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text37">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading25" style="display:inline-block;width:100%;z-index:28;">
+<h1 id="Heading25">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text38">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading27" style="display:inline-block;width:100%;z-index:30;">
+<h1 id="Heading27">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text39">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading26" style="display:inline-block;width:100%;z-index:32;">
+<h1 id="Heading26">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text40">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 400: bad request<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text42">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Body<br>item_id: int<br>item id<br>----------------------------------------<br>name: String<br>item name<br>----------------------------------------<br>description: String<br>item description<br>----------------------------------------<br>category: String<br>item category<br>----------------------------------------<br>location: String<br>item location<br>----------------------------------------<br>condition: String<br>item condition<br>----------------------------------------<br>city: String<br>city location<br>----------------------------------------<br>state: String<br>state of united state<br>----------------------------------------<br>zipCode: String<br>zip code of united state<br></span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text41">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response:<br>[<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 7,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;wqhfuoweh&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;wifbqijfb&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;wekfjwejfkewnoj&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;weojfbnwejofn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;wefjbnwejon&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;&quot;<br>&nbsp;&nbsp;&nbsp; },<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 8,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;ewnfjiqwn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;wefjlnwejofn&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;wefljwenfjl&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;wefljwenfjlkw&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;wefwefjln&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;&quot;,<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;&quot;<br>&nbsp;&nbsp;&nbsp; }<br>]<br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape4" style="display:inline-block;width:76px;height:42px;z-index:36;position:relative;">
+<img src="images/img0016.png" id="Shape4" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Get_all_Item_URL">
+<div class="Method_Description">
+<div id="wb_Text89">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Get all item url</strong></span>
+</div>
+</div>
+<div class="API_call">
+<div id="wb_Heading65" style="display:inline-block;width:100%;z-index:38;">
+<h1 id="Heading65">GET /rest/item_url</h1>
+</div>
+</div>
+<div class="Description_header">
+<div id="wb_Heading66" style="display:inline-block;width:100%;z-index:39;">
+<h1 id="Heading66">Description</h1>
+</div>
+</div>
+<div class="Description">
+<div id="wb_Text82">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">This will return all url of an item</span>
+</div>
+</div>
+<div class="header_Parameter">
+<div id="wb_Heading71" style="display:inline-block;width:100%;z-index:41;">
+<h1 id="Heading71">Header Parameter</h1>
+</div>
+</div>
+<div class="header_Parameter_text">
+<div id="wb_Text90">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="Path_parameter">
+<div id="wb_Heading67" style="display:inline-block;width:100%;z-index:43;">
+<h1 id="Heading67">Path Parameters</h1>
+</div>
+</div>
+<div class="Path_parameter_text">
+<div id="wb_Text83">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Querry_Parameter">
+<div id="wb_Heading68" style="display:inline-block;width:100%;z-index:45;">
+<h1 id="Heading68">Querry Parameters</h1>
+</div>
+</div>
+<div class="Querry_Parameter_text">
+<div id="wb_Text84">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">item_id: Integer (not null)<br>item id of an item</span>
+</div>
+</div>
+<div class="Body_Parameter">
+<div id="wb_Heading70" style="display:inline-block;width:100%;z-index:47;">
+<h1 id="Heading70">Body Parameters</h1>
+</div>
+</div>
+<div class="Body_Parameter_text">
+<div id="wb_Text85">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Responses">
+<div id="wb_Heading69" style="display:inline-block;width:100%;z-index:49;">
+<h1 id="Heading69">Responses</h1>
+</div>
+</div>
+<div class="statusCode_text">
+<div id="wb_Text86">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 400: bad request<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body_StatusCode">
+<div id="wb_Text88">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Body<br>url: String<br>url link</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text87">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response:<br>[url1,<br>url2,<br>url3]</span>
+</div>
+</div>
+<div class="Seperator">
+<div id="wb_Shape10" style="display:inline-block;width:76px;height:42px;z-index:53;position:relative;">
+<img src="images/img0012.png" id="Shape10" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Get_posted_item_size">
+<div class="Method_Description">
+<div id="wb_Text120">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Get posted item size</strong></span>
+</div>
+</div>
+<div class="API_call">
+<div id="wb_Heading91" style="display:inline-block;width:100%;z-index:55;">
+<h1 id="Heading91">GET /rest/item_size</h1>
+</div>
+</div>
+<div class="Description_header">
+<div id="wb_Heading92" style="display:inline-block;width:100%;z-index:56;">
+<h1 id="Heading92">Description</h1>
+</div>
+</div>
+<div class="Description">
+<div id="wb_Text113">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">This will return posted item size in database</span>
+</div>
+</div>
+<div class="header_Parameter">
+<div id="wb_Heading97" style="display:inline-block;width:100%;z-index:58;">
+<h1 id="Heading97">Header Parameter</h1>
+</div>
+</div>
+<div class="header_Parameter_text">
+<div id="wb_Text121">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Path_parameter">
+<div id="wb_Heading93" style="display:inline-block;width:100%;z-index:60;">
+<h1 id="Heading93">Path Parameters</h1>
+</div>
+</div>
+<div class="Path_parameter_text">
+<div id="wb_Text114">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Querry_Parameter">
+<div id="wb_Heading94" style="display:inline-block;width:100%;z-index:62;">
+<h1 id="Heading94">Querry Parameters</h1>
+</div>
+</div>
+<div class="Querry_Parameter_text">
+<div id="wb_Text115">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Body_Parameter">
+<div id="wb_Heading96" style="display:inline-block;width:100%;z-index:64;">
+<h1 id="Heading96">Body Parameters</h1>
+</div>
+</div>
+<div class="Body_Parameter_text">
+<div id="wb_Text116">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="Responses">
+<div id="wb_Heading95" style="display:inline-block;width:100%;z-index:66;">
+<h1 id="Heading95">Responses</h1>
+</div>
+</div>
+<div class="statusCode_text">
+<div id="wb_Text117">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 400: bad request<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body_StatusCode">
+<div id="wb_Text119">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code200</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text118">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response:<br>{<br>&nbsp;&nbsp;&nbsp; &quot;posted_item_size&quot;:96<br>}</span>
+</div>
+</div>
+<div class="Seperator">
+<div id="wb_Shape13" style="display:inline-block;width:76px;height:42px;z-index:70;position:relative;">
+<img src="images/img0025.png" id="Shape13" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Get_user_data">
+<div class="header">
+<div id="wb_Text60">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Get user data</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading42" style="display:inline-block;width:100%;z-index:72;">
+<h1 id="Heading42">GET /rest/user_data</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading43" style="display:inline-block;width:100%;z-index:73;">
+<h1 id="Heading43">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text53">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">This will return all user data in current session</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading64" style="display:inline-block;width:100%;z-index:75;">
+<h1 id="Heading64">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text81">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading44" style="display:inline-block;width:100%;z-index:77;">
+<h1 id="Heading44">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text54">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading45" style="display:inline-block;width:100%;z-index:79;">
+<h1 id="Heading45">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text55">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading47" style="display:inline-block;width:100%;z-index:81;">
+<h1 id="Heading47">Body Parameters</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text56">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading46" style="display:inline-block;width:100%;z-index:83;">
+<h1 id="Heading46">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text57">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text59">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Body<br>user_id: String<br>id of user<br>----------------------------------------------<br>username:String<br>username of user<br>----------------------------------------------<br>email:String<br>email of user<br>----------------------------------------------<br>full_name: String<br>full name of user<br>----------------------------------------------<br>city: String<br>city address of user<br>----------------------------------------------<br>state: String<br>state address of user<br>----------------------------------------------<br>zip: int<br>zip code address of user<br>----------------------------------------------<br>user_group_name: String<br>user role in current session<br>----------------------------------------------<br>user_level: int<br>user role level in current session<br>----------------------------------------------<br>phone_number:String<br>phone number of user</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text58">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response:<br>{<br>&nbsp;&nbsp;&nbsp; &quot;user_id&quot;: 19,<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;: &quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;email&quot;: &quot;umm@gmail.com&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;full_name&quot;: &quot;billy&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;:&quot;Syracuse&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;:&quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zip&quot;:12345,<br>&nbsp;&nbsp;&nbsp; &quot;user_group_name&quot;: &quot;ADMIN&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;user_level&quot;: 2,<br>&nbsp;&nbsp;&nbsp; &quot;phone_number&quot;: &quot;1112223333&quot;<br>}</span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape7" style="display:inline-block;width:76px;height:42px;z-index:87;position:relative;">
+<img src="images/img0020.png" id="Shape7" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Post_register_user">
+<div class="header">
+<div id="wb_Text69">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Register a new user</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading54" style="display:inline-block;width:100%;z-index:89;">
+<h1 id="Heading54">POST /rest/register_user</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading48" style="display:inline-block;width:100%;z-index:90;">
+<h1 id="Heading48">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text61">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">register a new user</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading49" style="display:inline-block;width:100%;z-index:92;">
+<h1 id="Heading49">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text62">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading50" style="display:inline-block;width:100%;z-index:94;">
+<h1 id="Heading50">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text63">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading52" style="display:inline-block;width:100%;z-index:96;">
+<h1 id="Heading52">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading53" style="display:inline-block;width:100%;z-index:97;">
+<h1 id="Heading53">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text64">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">user_id: String<br>id of user<br>----------------------------------------------<br>username:String (not null)<br>username of user<br>----------------------------------------------<br>password:String (not null)<br>password of user<br>----------------------------------------------<br>email:String<br>email of user<br>----------------------------------------------<br>full_name: String<br>full name of user<br>----------------------------------------------<br>city: String<br>city address of user<br>----------------------------------------------<br>state: String<br>state address of user<br>----------------------------------------------<br>zip: int<br>zip code address of user<br>----------------------------------------------<br>user_group_name: String<br>user role in current session<br>----------------------------------------------<br>phone_number:String<br>phone number of user<br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text65">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;: &quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;password&quot;: &quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;email&quot;: &quot;umm@gmail.com&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;full_name&quot;: &quot;billy&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;phone_number&quot;: &quot;1112223333&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;:&quot;syracuse&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;:&quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zip&quot;:&quot;12345&quot;<br>}<br><br>{<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;: &quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;password&quot;: &quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;email&quot;: &quot;umm@gmail.com&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;full_name&quot;: &quot;billy&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;phone_number&quot;: &quot;1112223333&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;:&quot;syracuse&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;:&quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zip&quot;:&quot;12345&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;user_group_name&quot;:&quot;ADMIN&quot;<br>}<br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading51" style="display:inline-block;width:100%;z-index:100;">
+<h1 id="Heading51">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text66">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;"><br>Code 400: bad body request | not a from-data package<br>code 500: internal error</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text67">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text68">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>None</span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape8" style="display:inline-block;width:76px;height:42px;z-index:104;position:relative;">
+<img src="images/img0021.png" id="Shape8" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Post_login_user">
+<div class="header">
+<div id="wb_Text78">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Login</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading61" style="display:inline-block;width:100%;z-index:106;">
+<h1 id="Heading61">POST /rest/login</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading55" style="display:inline-block;width:100%;z-index:107;">
+<h1 id="Heading55">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text70">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Login</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading56" style="display:inline-block;width:100%;z-index:109;">
+<h1 id="Heading56">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text71">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading57" style="display:inline-block;width:100%;z-index:111;">
+<h1 id="Heading57">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text72">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading59" style="display:inline-block;width:100%;z-index:113;">
+<h1 id="Heading59">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading60" style="display:inline-block;width:100%;z-index:114;">
+<h1 id="Heading60">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text73">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">username:String (not null)<br>username of user<br>----------------------------------------------<br>password:String (not null)<br>password of user<br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text74">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;:&quot;something4&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;password&quot;:&quot;something4&quot;<br>}</span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading58" style="display:inline-block;width:100%;z-index:117;">
+<h1 id="Heading58">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text75">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;"><br>Code 400: bad body request<br>code 500: internal error</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text76">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text77">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>{<br>&nbsp;&nbsp;&nbsp; &quot;token&quot;: &quot;this is a token&quot;<br>}</span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape9" style="display:inline-block;width:76px;height:42px;z-index:121;position:relative;">
+<img src="images/img0022.png" id="Shape9" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Post_an_item">
+<div class="header">
+<div id="wb_Text9">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Post an item</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading39" style="display:inline-block;width:100%;z-index:123;">
+<h1 id="Heading39">POST /rest/item</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading32" style="display:inline-block;width:100%;z-index:124;">
+<h1 id="Heading32">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text10">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">post an item to database</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading72" style="display:inline-block;width:100%;z-index:126;">
+<h1 id="Heading72">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text91">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading33" style="display:inline-block;width:100%;z-index:128;">
+<h1 id="Heading33">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text11">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading34" style="display:inline-block;width:100%;z-index:130;">
+<h1 id="Heading34">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading36" style="display:inline-block;width:100%;z-index:132;">
+<h1 id="Heading36">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading37" style="display:inline-block;width:100%;z-index:133;">
+<h1 id="Heading37">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text13">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">name: String (not null)<br>item name<br>----------------------------------------<br>description: String (not null)<br>item description<br>----------------------------------------<br>category: String (not null)<br>item category<br>----------------------------------------<br>location: String (not null)<br>item location<br>----------------------------------------<br>condition: String (not null)<br>item condition<br>----------------------------------------<br>city: String (not null)<br>city location<br>----------------------------------------<br>state: String (not null)<br>state of united state<br>----------------------------------------<br>zipCode: String (not null)<br>zip code of united state<br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text14">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;title&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;description&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;PDF document&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;some-wear&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;Oswego&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;13126&quot;<br>} <br><br><br><br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading35" style="display:inline-block;width:100%;z-index:136;">
+<h1 id="Heading35">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text15">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 418: missing information<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text16">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created<br><br><br></span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>{<br>&nbsp;&nbsp;&nbsp; &quot;item_id&quot;: 1<br>}<br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape5" style="display:inline-block;width:76px;height:42px;z-index:140;position:relative;">
+<img src="images/img0002.png" id="Shape5" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Post_a_file">
+<div class="header">
+<div id="wb_Text52">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Post a file</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading41" style="display:inline-block;width:100%;z-index:142;">
+<h1 id="Heading41">POST /rest/file</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading28" style="display:inline-block;width:100%;z-index:143;">
+<h1 id="Heading28">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text44">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">post multiple file to database</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading73" style="display:inline-block;width:100%;z-index:145;">
+<h1 id="Heading73">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text92">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading29" style="display:inline-block;width:100%;z-index:147;">
+<h1 id="Heading29">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text45">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading30" style="display:inline-block;width:100%;z-index:149;">
+<h1 id="Heading30">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text46">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">item_id: Integer (not null)<br>id of a posted item</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading38" style="display:inline-block;width:100%;z-index:151;">
+<h1 id="Heading38">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading40" style="display:inline-block;width:100%;z-index:152;">
+<h1 id="Heading40">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text47">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">name: String<br>Key name<br>-------------------------------------<br>filename: String<br>name of file<br>-------------------------------------<br>Content-Type: String<br>content type of file<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text48">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">\--AaB03x<br>content-disposition: form-data; name=&quot;file1&quot;; filename=&quot;file1.txt&quot;<br>Content-Type: application/octet-stream<br><br>... contents of file1.txt ...<br>\--AaB03x--<br>content-disposition: form-data; name=&quot;file2&quot;; filename=&quot;file2.pdf&quot;<br>Content-Type: application/pdf<br><br>... contents of file2.pdf ...<br>\--AaB03x--<br><br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading31" style="display:inline-block;width:100%;z-index:155;">
+<h1 id="Heading31">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text49">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 400: bad body request | not a from-data package<br>code 500: internal error<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text50">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created<br><br><br></span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text51">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>[<br>&quot;http://webpage1.txt&quot;,<br>&quot;http://webpage2.pdf&quot;<br>]</span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape6" style="display:inline-block;width:76px;height:42px;z-index:159;position:relative;">
+<img src="images/img0017.png" id="Shape6" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="POST_request_item">
+<div class="header">
+<div id="wb_Text130">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Request an item</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading104" style="display:inline-block;width:100%;z-index:161;">
+<h1 id="Heading104">POST /rest/request_item</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading98" style="display:inline-block;width:100%;z-index:162;">
+<h1 id="Heading98">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text122">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">request an item into from a person into database</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading105" style="display:inline-block;width:100%;z-index:164;">
+<h1 id="Heading105">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text131">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading99" style="display:inline-block;width:100%;z-index:166;">
+<h1 id="Heading99">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text123">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading100" style="display:inline-block;width:100%;z-index:168;">
+<h1 id="Heading100">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text124">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading102" style="display:inline-block;width:100%;z-index:170;">
+<h1 id="Heading102">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading103" style="display:inline-block;width:100%;z-index:171;">
+<h1 id="Heading103">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text125">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">message: String <br>a message for the donator<br>----------------------------------------<br>item_id: int (not null)<br>item id of a item<br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text126">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;item_id&quot;:10,<br>&nbsp;&nbsp;&nbsp; &quot;message&quot;:&quot;I really want this item&quot;<br>} </span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading101" style="display:inline-block;width:100%;z-index:174;">
+<h1 id="Heading101">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text127">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 418: missing information<br>Code 401: invalid or missing token<br>Code 400: missing or invalid item_id<br>Code 403: Item already been requested by user</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text128">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created<br><br><br></span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text129">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>{<br>&nbsp;&nbsp;&nbsp; &quot;requested_id&quot;: 1<br>}<br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape14" style="display:inline-block;width:76px;height:42px;z-index:178;position:relative;">
+<img src="images/img0026.png" id="Shape14" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="PUT_update_item_information">
+<div class="header">
+<div id="wb_Text101">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Update an item information</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading80" style="display:inline-block;width:100%;z-index:180;">
+<h1 id="Heading80">PUT /rest/item</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading74" style="display:inline-block;width:100%;z-index:181;">
+<h1 id="Heading74">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text93">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Set an item information</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading81" style="display:inline-block;width:100%;z-index:183;">
+<h1 id="Heading81">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text102">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading75" style="display:inline-block;width:100%;z-index:185;">
+<h1 id="Heading75">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text94">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading76" style="display:inline-block;width:100%;z-index:187;">
+<h1 id="Heading76">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text95">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading78" style="display:inline-block;width:100%;z-index:189;">
+<h1 id="Heading78">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading79" style="display:inline-block;width:100%;z-index:190;">
+<h1 id="Heading79">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text96">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">item_id: Integer (not null)<br>item id of an item<br>----------------------------------------<br>name: String (not null)<br>item name<br>----------------------------------------<br>description: String (not null)<br>item description<br>----------------------------------------<br>category: String (not null)<br>item category<br>----------------------------------------<br>location: String (not null)<br>item location<br>----------------------------------------<br>condition: String (not null)<br>item condition<br>----------------------------------------<br>city: String (not null)<br>city location<br>----------------------------------------<br>state: String (not null)<br>state of united state<br>----------------------------------------<br>zipCode: String (not null)<br>zip code of united state<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><br></span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text97">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;item_id&quot;:1,<br>&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;title&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;description&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;category&quot;: &quot;PDF document&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;condition&quot;: &quot;some-wear&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;city&quot;: &quot;Oswego&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;state&quot;: &quot;NY&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;zipCode&quot;: &quot;13126&quot;<br>} <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading77" style="display:inline-block;width:100%;z-index:193;">
+<h1 id="Heading77">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text98">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 418: missing information<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text99">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200: OK<br>Code 201: created</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text100">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>None<br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape11" style="display:inline-block;width:76px;height:42px;z-index:197;position:relative;">
+<img src="images/img0023.png" id="Shape11" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Put_Set_SQL">
+<div class="header">
+<div id="wb_Text26">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Set SQL</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading14" style="display:inline-block;width:100%;z-index:199;">
+<h1 id="Heading14">PUT /rest/sql</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:200;">
+<h1 id="Heading1">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text18">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">set SQL database information</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading9" style="display:inline-block;width:100%;z-index:202;">
+<h1 id="Heading9">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text19">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:204;">
+<h1 id="Heading10">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text20">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading12" style="display:inline-block;width:100%;z-index:206;">
+<h1 id="Heading12">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading13" style="display:inline-block;width:100%;z-index:207;">
+<h1 id="Heading13">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text21">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">ip:String (not null)<br>ip address of SQL server<br>----------------------------------------------<br>port:int (not null)<br>port number of SQL server<br>----------------------------------------------<br>username:String (not null)<br>username of SQL server<br>----------------------------------------------<br>password:String (not null)<br>password of SQL server<br>----------------------------------------------<br>schema:String (not null)<br>chosen schemas name of SQL server</span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text22">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;ip&quot;:&quot;192.168.1.1&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;port&quot;:0000,<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;:&quot;ice cream&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;password&quot;:&quot;yummy&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;schema&quot;:&quot;sugar_high&quot;<br>}<br><br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading11" style="display:inline-block;width:100%;z-index:210;">
+<h1 id="Heading11">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text23">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;"><br>Code 418: missing information</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text24">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text25">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>None<br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape2" style="display:inline-block;width:76px;height:42px;z-index:214;position:relative;">
+<img src="images/img0018.png" id="Shape2" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="Put_Set_FTP">
+<div class="header">
+<div id="wb_Text35">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Set FTP</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading21" style="display:inline-block;width:100%;z-index:216;">
+<h1 id="Heading21">PUT /rest/ftp</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading15" style="display:inline-block;width:100%;z-index:217;">
+<h1 id="Heading15">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text27">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">set FTP information</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading16" style="display:inline-block;width:100%;z-index:219;">
+<h1 id="Heading16">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text28">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading17" style="display:inline-block;width:100%;z-index:221;">
+<h1 id="Heading17">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text29">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading19" style="display:inline-block;width:100%;z-index:223;">
+<h1 id="Heading19">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading20" style="display:inline-block;width:100%;z-index:224;">
+<h1 id="Heading20">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text30">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">ip:String (not null)<br>ip address of FTP server<br>----------------------------------------------<br>port:int (not null)<br>port number of FTP server<br>----------------------------------------------<br>username:String (not null)<br>username of FTP server<br>----------------------------------------------<br>password:String (not null)<br>password of FTP server<br>----------------------------------------------<br>defaultFolderPath:String (not null)<br>chosen default folder path of FTP server</span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text31">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">{<br>&nbsp;&nbsp;&nbsp; &quot;ip&quot;: &quot;localhost&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;port&quot;: 21,<br>&nbsp;&nbsp;&nbsp; &quot;username&quot;: &quot;qwe&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;password&quot;: &quot;awe&quot;,<br>&nbsp;&nbsp;&nbsp; &quot;defaultFolderPath&quot;: &quot;/FrontEndServer/1&quot;<br>}<br><br><br><br><br><br></span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading18" style="display:inline-block;width:100%;z-index:227;">
+<h1 id="Heading18">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text32">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;"><br>Code 418: missing information</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text33">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200<br>Code 201: created</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text34">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>None<br></span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape3" style="display:inline-block;width:76px;height:42px;z-index:231;position:relative;">
+<img src="images/img0019.png" id="Shape3" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="DELETE_item">
+<div class="header">
+<div id="wb_Text111">
+<span style="color:#FFFFFF;font-family:Arial;font-size:32px;"><strong>Delete an item</strong></span>
+</div>
+</div>
+<div class="title">
+<div id="wb_Heading89" style="display:inline-block;width:100%;z-index:233;">
+<h1 id="Heading89">DELETE /rest/item</h1>
+</div>
+</div>
+<div class="heading1">
+<div id="wb_Heading82" style="display:inline-block;width:100%;z-index:234;">
+<h1 id="Heading82">Description</h1>
+</div>
+</div>
+<div class="main">
+<div id="wb_Text103">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Delete an item</span>
+</div>
+</div>
+<div class="A1">
+<div id="wb_Heading90" style="display:inline-block;width:100%;z-index:236;">
+<h1 id="Heading90">Header Parameter</h1>
+</div>
+</div>
+<div class="A2">
+<div id="wb_Text112">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">access_token: String (not null)<br>access token for current session</span>
+</div>
+</div>
+<div class="article1">
+<div id="wb_Heading83" style="display:inline-block;width:100%;z-index:238;">
+<h1 id="Heading83">Path Parameters</h1>
+</div>
+</div>
+<div class="article2">
+<div id="wb_Text104">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article3">
+<div id="wb_Heading84" style="display:inline-block;width:100%;z-index:240;">
+<h1 id="Heading84">Querry Parameters</h1>
+</div>
+</div>
+<div class="article4">
+<div id="wb_Text105">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">item_id: Integer (not null)<br>item id of an item</span>
+</div>
+</div>
+<div class="article6">
+<div id="wb_Heading87" style="display:inline-block;width:100%;z-index:242;">
+<h1 id="Heading87">Body Parameters</h1>
+</div>
+</div>
+<div class="BEx">
+<div id="wb_Heading88" style="display:inline-block;width:100%;z-index:243;">
+<h1 id="Heading88">Body Examples</h1>
+</div>
+</div>
+<div class="article7">
+<div id="wb_Text106">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="BodyExample">
+<div id="wb_Text107">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">None</span>
+</div>
+</div>
+<div class="article5">
+<div id="wb_Heading85" style="display:inline-block;width:100%;z-index:246;">
+<h1 id="Heading85">Responses</h1>
+</div>
+</div>
+<div class="statusCode">
+<div id="wb_Text108">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 418: missing information<br>Code 401: invalid or missing token</span>
+</div>
+</div>
+<div class="Body">
+<div id="wb_Text109">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Code 200: OK</span>
+</div>
+</div>
+<div class="Code">
+<div id="wb_Text110">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;">Example response<br>None</span>
+</div>
+</div>
+<div class="Line">
+<div id="wb_Shape12" style="display:inline-block;width:76px;height:42px;z-index:250;position:relative;">
+<img src="images/img0024.png" id="Shape12" alt="" style="width:76px;height:42px;">
+</div>
+</div>
+</div>
+<div id="wb_END">
+<div id="END">
+<hr id="DividerLine3" style="display:block;">
+<div id="wb_Heading86" style="display:inline-block;width:165px;z-index:252;">
+<h2 id="Heading86">END</h2>
+</div>
+<hr id="DividerLine4" style="display:block;">
+</div>
+</div>
+<div id="wb_Copy_right">
+<div id="Copy_right-overlay"></div>
+<div id="Copy_right">
+<div class="row">
+<div class="col-1">
+<picture id="wb_Picture1" style="display:block;width: 100%;height:auto;z-index:254">
+<img src="images/Vincent_cocosign.png" id="Picture1" alt="">
+</picture>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
